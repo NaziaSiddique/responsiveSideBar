@@ -60,3 +60,26 @@ body {
   background-color: white;
   transition: all 0.3s ease-in-out;
 }
+
+.toggle-btn.open div {
+  background-color: transparent;
+}
+.toggle-btn.open div::before {
+  transform: rotate(405deg) translateY(4px);
+}
+
+.toggle-btn.open div::after {
+  transform: rotate(-405deg) translate(20px, -4px);
+}
+
+.main-header {
+  background-color: #4b5d67;
+  width: 50px;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s ease-in-out;
+  overflow: hidden;
+  z-index: 10;
+}
