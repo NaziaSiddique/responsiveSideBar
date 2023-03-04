@@ -1,6 +1,6 @@
 *,
 *::before,
-*::before {
+*::after {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
@@ -25,4 +25,38 @@ body {
   cursor: pointer;
   height: 60px;
   width: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+
+.toggle-btn div {
+  height: 4px;
+  width: 25px;
+  background-color: white;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+}
+
+.toggle-btn div::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: 0;
+  height: 4px;
+  width: 40px;
+  background-color: white;
+  transition: all 0.3s ease-in-out;
+}
+
+.toggle-btn div::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  right: 0;
+  height: 4px;
+  width: 40px;
+  background-color: white;
+  transition: all 0.3s ease-in-out;
 }
